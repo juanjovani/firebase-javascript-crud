@@ -1,10 +1,10 @@
-import {saveTask} from './firebase.js'
+import {saveTask, getTask} from './firebase.js'
 
-window.addEventListener("DOMContentLoaded", async (e) => {
 
+window.addEventListener("DOMContentLoaded", async () => {
+  const querySnapshot = await getTasks()
 })
-
-const taskForm = document.getElementById("task-form");
+const tasksForm = document.getElementById("tasks-form")
 
 taskForm.addEventListener("submit", async (e) => {
   e.preventDefault();
